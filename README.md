@@ -1,7 +1,7 @@
 ## Global Fire Season Severity Analysis and Forecasting<br>
 Leonardo N. Ferreira, Didier A. Vega-Oliveros, Liang Zhao, Manoel F. Cardoso and Elbert E. N. Macau
 
-![Climate networks](figs/climate_nets.jpg)
+![Climate networks](figs/fig4.jpg)
 
 In this page you find the code used in the paper.  
 arXiv: [arxiv.org/abs/1902.03298](https://arxiv.org/abs/1903.06667)
