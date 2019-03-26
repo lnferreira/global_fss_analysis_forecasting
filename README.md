@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+## The Influence of Time Series Distance Functions on Climate Networks<br>
+Leonardo N. Ferreira, Nicole C. R. Ferreira, Maria Livia L. M. Gava, Liang Zhao and Elbert E. N. Macau
 
-You can use the [editor on GitHub](https://github.com/lnferreira/global_fss_analysis_forecasting/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+![Climate networks](figs/climate_nets.jpg)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In this page you find the code used in the paper.  
+arXiv: [arxiv.org/abs/1902.03298](https://arxiv.org/abs/1902.03298)
 
-### Markdown
+### Code
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+All the algorithms and experiments used in this paper were implemented using [R](https://www.r-project.org/). [Download](https://github.com/lnferreira/climate_networks_distance_functions/archive/master.zip) the code and open the R folder. There are 3 files:
 
-```markdown
-Syntax highlighted code block
+* R/
+   * tsDist.R 
+      - Calculates distance between a set of time series
+   * run.R
+      - Example of how to use the code      
 
-# Header 1
-## Header 2
-### Header 3
+### Contact
 
-- Bulleted
-- List
+If you have questions or sugestions, send us an email:
 
-1. Numbered
-2. List
+**Leonardo N. Ferreira**<br>
+[ferreira@leonardonascimento.com](ferreira@leonardonascimento.com)<br>
+[www.leonardonascimento.com](www.leonardonascimento.com)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lnferreira/global_fss_analysis_forecasting/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+**Zhao Liang**<br>
+[zhao@usp.br](zhao@usp.br)<br>
+[dcm.ffclrp.usp.br/~zhao/](dcm.ffclrp.usp.br/~zhao/)
