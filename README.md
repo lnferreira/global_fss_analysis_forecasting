@@ -13,11 +13,11 @@ All the algorithms and experiments used in this paper were implemented using [R]
 * R/
    * ```fire_season_analysis.R```
       - Method implementation
-   * run_example.R
+   * ```run_example.R```
       - An example of how to use the fire season detection and the forecasting methods
-   * data_exemple.csv
+   * ```data_exemple.csv```
       - Data from figure 1 in the paper (India). This data is used in the examples
-   * R.Rproj
+   * ```R.Rproj```
       - R Studio project file
 
 ### Contact
