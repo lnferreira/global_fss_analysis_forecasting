@@ -8,13 +8,15 @@ arXiv: [arxiv.org/abs/1902.03298](https://arxiv.org/abs/1903.06667)
 
 ### Code
 
-All the algorithms and experiments used in this paper were implemented using [R](https://www.r-project.org/). [Download](https://github.com/lnferreira/global_fss_analysis_forecasting/archive/master.zip) the code and open the R folder. There are 2 files:
+All the algorithms and experiments used in this paper were implemented using [R](https://www.r-project.org/). [Download](https://github.com/lnferreira/global_fss_analysis_forecasting/archive/master.zip) the code and open the R folder. There are 3 files:
 
 * R/
    * fire_season_analysis.R
       - Method implementation
-   * run.R
+   * run_example.R
       - Example of how to use the code      
+   * data_exemple.csv
+      - Data from figure 1 in the paper (India). This data is used in the examples.
 
 ### Contact
 
