@@ -14,9 +14,9 @@ All the algorithms and experiments used in this paper were implemented using [R]
    * fire_season_analysis.R
       - Method implementation
    * run_example.R
-      - Example of how to use the code      
+      - An example of how to use the fire season detection and the forecasting methods
    * data_exemple.csv
-      - Data from figure 1 in the paper (India). This data is used in the examples.
+      - Data from figure 1 in the paper (India). This data is used in the examples
    * R.Rproj
       - R Studio project file
 
