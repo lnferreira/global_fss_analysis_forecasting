@@ -11,7 +11,7 @@ arXiv: [arxiv.org/abs/1902.03298](https://arxiv.org/abs/1903.06667)
 All the algorithms and experiments used in this paper were implemented using [R](https://www.r-project.org/). [Download](https://github.com/lnferreira/global_fss_analysis_forecasting/archive/master.zip) the code and open the R folder. There are 4 files:
 
 * R/
-   * fire_season_analysis.R
+   * ```fire_season_analysis.R```
       - Method implementation
    * run_example.R
       - An example of how to use the fire season detection and the forecasting methods
