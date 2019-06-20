@@ -11,6 +11,12 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+library(zoo)
+library(dplyr)
+library(lubridate)
+library(forecast)
+library(prophet)
+library(tscount)
 
 # =================================================================================
 # Method to find the months with the largest occurance of fire by year
@@ -161,7 +167,7 @@ estimate_fire_season <- function(ts, num_seasons, return_time=TRUE, consider_mor
 }
 
 # =================================================================================
-# 
+# Return the fire seasons centered in the month with the highest occurance of fire
 # =================================================================================
 estimate_fire_season_max_month_centered  <- function(ts, month_break, month_window_length=7) {
     years = unique(year(ts$time))
@@ -220,4 +226,64 @@ remove_outliers <- function(x, return_type=c("remove", "id", "na")) {
         return(x)
     }
     ids
+}
+
+# =================================================================================
+# Group a data frame (time, fc) by month 
+# =================================================================================
+group_by_month <- function(ts_df){
+    ts_df$month = month(ts_df$time)
+    ts_df$year = year(ts_df$time)
+    sum_month = (ts_df %>% group_by(month) %>% tally(fc))$n
+    dates = unique(ts_df[c("year", "month")])
+    dates = ymd(paste0(dates$year, sprintf("%02d", dates$month), "01"))
+    data.frame(time=dates, fc=sum_month)
+}
+
+# =================================================================================
+# Prophet forecasting method
+# =================================================================================
+forecast_facebook <- function(ts_train, ts_test, add_const=0, boxcox_lambda=NaN, 
+                              return_accuracy=FALSE, plot_result=F, ...) {
+    ts_train$y = ts_train$y + add_const
+    ts_train_original = ts_train
+    ts_test$y = ts_test$y + add_const
+    if (!is.na(boxcox_lambda)){
+        if (boxcox_lambda == "auto") {
+            boxcox_lambda = BoxCox.lambda(ts_train$y)
+        }
+        bx = boxcox_transform(ts_train$y, "auto")
+        ts_train$y = bx$ts
+    }
+    m = prophet(ts_train, daily.seasonality = F, weekly.seasonality = F, ...)
+    # future = make_future_dataframe(m, periods = nrow(ts_test), freq = freq)
+    future = data.frame(ds = ts_test$ds)
+    prediction = predict(m, future)$yhat
+    if (!is.na(boxcox_lambda))
+        prediction = InvBoxCox(prediction, lambda = bx$lambda)
+    if (plot_result){
+        ts = as.data.frame(rbind(ts_train_original[c("ds", "y")], ts_test[c("ds", "y")]))
+        ts$type = "original"
+        ts = rbind(ts, data_frame(ds=ts_test$ds, y=prediction, type="forecast"))
+        show(add_theme(ggplot(ts, aes(x=ds, y=y, group=type, color=type)) + 
+                           geom_line(data = subset(ts, type == "original")) +
+                           geom_line(data = subset(ts, type == "forecast")) + 
+                           scale_color_manual(values=c("#d62424", "gray60"))))
+    }
+    if (return_accuracy) {
+        prediction =  accuracy(prediction, ts_test$y)
+    } else {
+        prediction = prediction - add_const
+    }
+    prediction
+}
+
+# =================================================================================
+# BoxCox transformation
+# =================================================================================
+boxcox_transform <- function(ts, lambda="auto") {
+    if (lambda == "auto") {
+        lambda = BoxCox.lambda(ts)
+    }
+    list(ts = BoxCox(ts, lambda), lambda= lambda)
 }
