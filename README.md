@@ -25,9 +25,9 @@ All the algorithms and experiments used in this paper were implemented using [R]
 If you have questions or sugestions, send us an email:
 
 **Leonardo N. Ferreira**<br>
-[ferreira@leonardonascimento.com](ferreira@leonardonascimento.com)<br>
+[ferreira@leonardonascimento.com](mailto:ferreira@leonardonascimento.com)<br>
 [leonardoferreira.com](https://leonardoferreira.com)
 
 **Didier A. Vega-Oliveros**<br>
-[davo@icmc.usp.br](davo@icmc.usp.br)<br>
+[davo@icmc.usp.br](mailto:davo@icmc.usp.br)<br>
 [didiervega.github.io](https://didiervega.github.io/)
