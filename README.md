@@ -30,4 +30,4 @@ If you have questions or sugestions, send us an email:
 
 **Didier A. Vega-Oliveros**<br>
 [davo@icmc.usp.br](davo@icmc.usp.br)<br>
-[didiervega.github.io/](https://didiervega.github.io/)
+[didiervega.github.io](https://didiervega.github.io/)
