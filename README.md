@@ -26,8 +26,8 @@ If you have questions or sugestions, send us an email:
 
 **Leonardo N. Ferreira**<br>
 [ferreira@leonardonascimento.com](ferreira@leonardonascimento.com)<br>
-[https://www.leonardoferreira.com](www.leonardoferreira.com)
+[leonardoferreira.com](https://leonardoferreira.com)
 
 **Didier A. Vega-Oliveros**<br>
 [davo@icmc.usp.br](davo@icmc.usp.br)<br>
-[https://didiervega.github.io/](https://didiervega.github.io/)
+[didiervega.github.io/](https://didiervega.github.io/)
