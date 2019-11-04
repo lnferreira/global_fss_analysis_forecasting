@@ -20,6 +20,25 @@ All the algorithms and experiments used in this paper were implemented using [R]
    * ```R.Rproj```
       - R Studio project file
 
+### Bibtex
+
+If you used this code, please cite our paper.
+
+```
+@article{ferreira20,
+	Title = {Global fire season severity analysis and forecasting},
+	Journal = {Computers & Geosciences},
+	Author = {Leonardo N. Ferreira and Didier A. Vega-Oliveros and Liang Zhao and Manoel F. Cardoso and Elbert E.N. Macau},
+	Doi = {https://doi.org/10.1016/j.cageo.2019.104339},
+	Issn = {0098-3004},
+	Keywords = {Global fire activity, Wildfire, Fire season length, Fire severity, Climate change, Time series prediction},
+	Pages = {104339},
+	Url = {http://www.sciencedirect.com/science/article/pii/S0098300419302808},
+	Volume = {134},
+	Year = {2020}
+}
+```
+
 ### Contact
 
 If you have questions or sugestions, send us an email:
